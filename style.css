@@ -1,0 +1,600 @@
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Catamaran', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.nav{
+    display:flex;
+    padding:2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    flex: 1; 
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style:none;
+    display:inline-block;
+    padding:5px 20px;
+    position:relative;
+   
+   
+}
+.nav-links ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+   
+}
+/* line css animation in navbar */
+
+.nav-links ul li::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:#f44336;
+    display:block;
+    margin:auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+.text-box{
+    width:90%;
+     color:#fff;
+     position:absolute;
+     top:50%;
+     left:50%;  
+     transform:translate(-50%,-50%);
+     text-align:center;
+    }
+ .text-box h1{
+     font-size:80px;
+     font-weight: 600;
+    }
+ .text-box p{
+     margin:190px 0 40px;
+     font-size:20px;
+ }
+ .text-box .button{
+   display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid #fff;
+    padding:12px 34px;
+}
+.text-box .button:hover{
+
+    border:1px solid#f44336;
+    background: #f44336;
+    transition:1.5s;
+}
+.nav-item .dropdown-menu{
+    background-color: rgba(43, 67, 186, 0.7);
+
+}
+.nav-item .dropdown-item{
+    color: black;
+    background-color: rgb(251, 255, 196);
+    
+}
+.nav-item .dropdown-item:hover{
+    transition:0.5s;
+    color: rgb(251, 255, 196);
+    background-color: black;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width:700px){
+    .text-box h1{
+        font-size:50px; 
+    }
+    .text-box p{
+        font-size:18px;
+    }
+    nav .fa{
+        padding: 8px;
+        display: block;
+        color: rgb(197, 198, 232);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        width: 36px;
+        margin-right: 20px;
+    }
+    
+    .nav-links ul{
+        padding: 15px;
+    }
+    nav .fa:hover{
+       background-color: rgb(235, 236, 247);
+       color: rgb(156, 191, 222);
+       border-radius: 5px;
+    }
+    .nav-links ul li{
+        display:block;
+        margin-top: 15px;
+    }
+    .nav-links{
+        position: fixed;
+        background: #2b48c7;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        
+    }
+    .nav-item .dropdown-item{
+        
+        background-color: rgb(251, 255, 196);
+        
+    }
+
+
+}
+
+/* Courses */
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course h1{
+    font-size: 45px;
+    font-weight: 550;
+}
+.course .card{
+    background: #fff3f3;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border-radius: 8px;
+    border-width: 0px;
+}
+.course h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course .card:hover{
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0,0.2);
+}
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus h1{
+    font-size: 45px;
+    font-weight: 600;
+}
+.campus-col{
+    flex-basis: 32%;
+   border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width:100%;
+    height:550px;  border-radius: 10px;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 550px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    
+}
+.layer:hover{
+    background: linear-gradient(rgba(75, 56, 88, 0.5),rgba(191, 131, 203, 0.5)) ;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.block .layer:hover{
+    background: linear-gradient(rgba(42, 43, 65, 0.5),rgba(127, 139, 202, 0.655)) ;
+    border-radius: 10px;
+    
+}
+.cyber .layer:hover{
+    background: linear-gradient(rgba(57, 76, 91, 0.5),rgba(121, 184, 192, 0.5)) ;
+    border-radius: 10px;
+    
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    transform: translateX(-50);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.layer:hover h3{
+    bottom: 85%;
+    opacity: 1;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 35px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+.facilities h1{
+    font-size: 45px;
+    font-weight: 550;
+}
+
+/* <!-- testimonials --> */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    background: linear-gradient(rgba(77, 68, 209, 0.634),rgba(61, 211, 228, 0.59));
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    margin: 35px;
+}
+.testimonials-col img{
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials h1{
+    font-size: 45px;
+    font-weight: 550;
+}
+.testimonials p{
+    padding: 0;
+}
+.testimonials-col i{
+    color: rgb(40, 28, 206);
+}
+
+/* call to action */
+
+.cta{
+margin: 100px auto;
+height: 400px;
+width: 80%;
+background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner.jpg);
+background-position: center;
+background-size: cover;
+border-radius: 5px;
+text-align: center;
+padding: 100px 0;
+}
+.cta h1{
+    font-size: 40px;
+    font-weight: 550;
+    color: aliceblue;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.cta .button{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid #fff;
+    padding:12px 34px;
+    border-radius: 20px;
+}
+.cta .button:hover{
+    color: #363008;
+
+}
+.cta .button:hover{
+    border:2px solid #5c520a;
+    background: linear-gradient(rgb(252, 246, 72),rgba(244, 242, 242, 0.545));
+    box-shadow: 0 0 30px 0px rgba(233, 236, 38, 0.781);
+    transition:0.5s; 
+}
+@media(max-width:700px){
+.cta h1{
+    font-size: 25px;
+}
+}
+/* Footer */
+.footer{
+   width: 100%;
+   text-align: center;
+   padding: 30px 0; 
+}
+.footer h4{
+margin-bottom: 25px;
+margin-top: 25px;
+font-weight: 600;
+}
+.icons .fa{
+color: #3936f4;
+margin: 0 10px;
+cursor: pointer;
+padding: 15px 0;
+}
+.fa-heart-o{
+    color: #f44336;
+    margin-top: 10px;
+}
+
+/* sub-header */
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/graduation.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    font-size:60px;
+    font-weight: 500;
+    margin-top: 80px;
+   }
+.blogs{
+    width: 80%;
+    margin: auto;
+    margin-top: 0px;
+    display: flex;
+    padding-top: 80px;
+}
+.blog .card{
+    margin-top: 80px;
+    width:800px
+}
+.blog img{
+    height: 600px;
+    
+}
+.form .card{
+    text-align: center;
+    margin-top: 80px;
+    height: 644px;
+    border-color: #f44336;
+}
+@media(max-width:700px){
+    .blogs h1{
+        font-size: 24px;
+    }
+    .blogs{
+        display: block;
+    }
+    .blog .card{
+        margin-top: 20px;
+        width:377px;
+    }
+    .blog img{
+    
+        height:400px;
+    }
+    
+}
+
+/* About us */
+
+.aboutus{
+    width: 85%;
+    margin: auto;
+    margin-top: 0px;
+    display: flex;
+    padding-top: 80px;
+}
+.about .card{
+    margin-top: 80px;
+    width:900px;
+    border:0px;
+}
+.about .card-body{
+    margin-left: 50px;
+}
+.about img{
+    height: 450px;
+    padding: 30px;
+    
+    
+}
+
+ul .links {
+    
+    margin-top: 15px;
+    margin-left: 80%;
+}
+
+.links li {
+    border: 2px solid #4158D0;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+}
+
+.links li a {
+    text-transform: uppercase;
+    color: rgb(50, 12, 75);
+    text-decoration: none;
+}
+
+.links li:hover {
+    border-color: #C850C0;
+}
+
+.vertical-line {
+    height: 50px;
+    width: 3px;
+    background: #C850C0;
+    margin-left: 80px;
+    
+}
+
+.icons {
+    
+    padding: 15px 0;
+}
+
+.icons li {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+.icons li i {
+    font-size: 26px;
+    opacity: 0.8;
+}
+
+.icons li i:hover {
+    color: #C850C0;
+    cursor: pointer;
+}
+.vertical-line:hover{
+    background: #4158D0;
+    cursor: pointer;
+}
+
+
+/*****************/
+
+@media(max-width: 900px) {
+    section {
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: none;
+    }
+
+    .image {
+        height: 100vh;
+        border-radius: none;
+    }
+
+    .content {
+        height: 100vh;
+        border-radius: none;
+    }
+
+    .content h2 {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .content span {
+        margin: 20px 0;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .links li a {
+        font-size: 14px;
+    }
+
+    .links {
+        margin: 5px 0;
+    }
+
+    .links li {
+        padding: 6px 10px;
+    }
+
+    .icons li i {
+        font-size: 15px;
+    }
+}
+.link .card{
+    
+    margin-top: 130px;
+    height: 500px;
+    border: 0px;
+    width: 15%;
+    margin-left: 70px;
+    display: block;
+}
+
+@media(max-width:700px){
+    .aboutus h1{
+        font-size: 24px;
+    }
+    .aboutus{
+        display: block;
+    }
+    .about .card{
+        margin-top: 20px;
+        width:377px;
+    }
+    .about img{
+        height:400px;
+    }
+    .link .card{
+        margin-top: 80px;
+        height: 350px;
+        width: 80%;
+    }
+    .about .card-body{
+        margin-top: 100px;
+        
+    }
+}
+
